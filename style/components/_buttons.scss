@@ -7,18 +7,24 @@
   text-decoration: none;
   color: $White; 
   font-weight: bold;
-  font-size: rem(18);
   line-height: rem(27);
   transition: all 0.2s ease;
 
   &:hover {
-    // filter: brightness(1.05);
     border: 1px solid $Cyan;
     background: transparent;
     color: $Cyan;
   }
 
-  @media screen and (min-width: 650px) {
-    font-size: rem(16);
+  &-navbar {
+    font-size: rem(18);
+
+    @media screen and (min-width: 650px) {
+      font-size: rem(16);
+    }
+  }
+
+  &-page {
+    font-size: rem(20);
   }
 }

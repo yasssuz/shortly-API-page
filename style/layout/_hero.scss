@@ -1,0 +1,40 @@
+.hero {
+  &__content {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: rem(37);
+    padding: 0 calc((100vw - 1156px) / 2)
+  }
+
+  &__illustration-area {
+    img {
+      margin-left: 24px;
+      width: 135%;
+      max-width: 800px;
+
+      @media screen and (min-width: 650px) {
+        margin-left: 100px;
+      }
+    }
+  }
+
+  &__text-area {
+    text-align: center;
+    margin: 0 24px;
+
+    h1 {
+      max-width: 12ch;
+      margin: auto;
+    }
+
+    p {
+      margin: rem(15) 0 rem(32);
+    }
+
+    a {
+      height: rem(56);
+      width: rem(197);
+      margin: auto;
+    }
+  }
+}

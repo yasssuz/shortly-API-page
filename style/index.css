@@ -6,6 +6,18 @@
   box-sizing: border-box;
 }
 
+html.active {
+  overflow: hidden;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+}
+
 body,
 input,
 textarea,
@@ -14,8 +26,20 @@ button {
   font-family: "Poppins", sans-serif;
 }
 
-html.active {
-  overflow: hidden;
+.primary-title {
+  font-weight: bold;
+  font-size: 2.625rem;
+  color: #35323e;
+  line-height: 3rem;
+  letter-spacing: -1.05px;
+}
+
+.primary-paragraph {
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+  letter-spacing: 0.122px;
+  color: #9e9aa7;
 }
 
 .primary-btn {
@@ -27,7 +51,6 @@ html.active {
   text-decoration: none;
   color: white;
   font-weight: bold;
-  font-size: 1.125rem;
   line-height: 1.6875rem;
   transition: all 0.2s ease;
 }
@@ -36,10 +59,16 @@ html.active {
   background: transparent;
   color: #2acfcf;
 }
+.primary-btn-navbar {
+  font-size: 1.125rem;
+}
 @media screen and (min-width: 650px) {
-  .primary-btn {
+  .primary-btn-navbar {
     font-size: 1rem;
   }
+}
+.primary-btn-page {
+  font-size: 1.25rem;
 }
 
 .overlay {
@@ -214,6 +243,39 @@ html.active {
     height: 2.625rem;
     width: 6.625rem;
   }
+}
+
+.hero__content {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 2.3125rem;
+  padding: 0 calc((100vw - 1156px) / 2);
+}
+.hero__illustration-area img {
+  margin-left: 24px;
+  width: 135%;
+  max-width: 800px;
+}
+@media screen and (min-width: 650px) {
+  .hero__illustration-area img {
+    margin-left: 100px;
+  }
+}
+.hero__text-area {
+  text-align: center;
+  margin: 0 24px;
+}
+.hero__text-area h1 {
+  max-width: 12ch;
+  margin: auto;
+}
+.hero__text-area p {
+  margin: 0.9375rem 0 2rem;
+}
+.hero__text-area a {
+  height: 3.5rem;
+  width: 12.3125rem;
+  margin: auto;
 }
 
 /*# sourceMappingURL=index.css.map */
