@@ -1,0 +1,12 @@
+.primary-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: rem(28);
+  background: $Cyan;
+  text-decoration: none;
+  color: $White; 
+  font-weight: bold;
+  font-size: rem(18);
+  line-height: rem(27);
+}
