@@ -14,11 +14,13 @@
     visibility: visible;
     opacity: 1;
   }
+
+  @media screen and (min-width: 650px) {
+    display: none;
+  }
 }
 
 .header {
-  min-height: 100vh;
-
   &__content {
     padding: rem(40) calc((100vw - 1156px) / 2) rem(25);
     display: flex;
@@ -27,6 +29,10 @@
     position: relative;
     margin: 0 24px;
     z-index: 99;
+
+    @media screen and (min-width: 650px) {
+    padding: rem(55) calc((100vw - 1156px) / 2);
+  }
   }
 
   &__mobile-toggler {
@@ -49,6 +55,10 @@
           transform: translateY(-9px) rotate(-45deg);
         }
       }
+    }
+
+    @media screen and (min-width: 650px) {
+      display: none;
     }
 
     .bar {
@@ -89,6 +99,21 @@
       opacity: 1;
     }
 
+    @media screen and (min-width: 650px) {
+      position: unset;
+      flex-direction: row;
+      background: transparent;
+      visibility: visible;
+      opacity: 1;
+      justify-content: flex-end;
+      padding: 0;
+    }
+
+    @media screen and (min-width: 968px) {
+      justify-content: space-between;
+      margin-left: rem(45);
+    }
+
     .link {
       font-size: rem(18);
       color: $White;
@@ -97,6 +122,23 @@
       font-weight: bold;
       text-transform: capitalize;
       margin-bottom: rem(30);
+      transition: color 0.1s ease;
+
+      @media screen and (min-width: 650px) {
+        margin-bottom: 0;
+        font-size: rem(16);
+        color: $GrayishViolet;
+
+        &:hover {
+          color: $VeryDarkBlue;
+        }
+      }
+    }
+
+    @media screen and (min-width: 650px) {
+      .link + .link {
+        margin-left: rem(30);
+      }
     }
 
     .signup-side {
@@ -106,14 +148,35 @@
       border-top: 1px solid hsla(257, 8%, 63%, 1);
       width: 100%;
 
+      @media screen and (min-width: 650px) {
+        display: none;
+      }
+
+      @media screen and (min-width: 968px) {
+        display: flex;
+        border: 0;
+        flex-direction: row;
+        margin-left: auto;
+        justify-content: flex-end;
+      }
+
       a:first-child {
         margin-top: rem(30);
         margin-bottom: rem(30);
-      }
+
+        @media screen and (min-width: 968px) {
+          margin: 0 rem(40) 0;
+        }
+      }  
 
       .primary-btn {
         width: 100%;
         padding: 0.6em;
+
+        @media screen and (min-width: 968px) {
+          height: rem(42);
+          width: rem(106);
+        }
       }
     }
   }
