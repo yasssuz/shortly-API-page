@@ -31,8 +31,8 @@
     z-index: 99;
 
     @media screen and (min-width: 650px) {
-    padding: rem(55) calc((100vw - 1156px) / 2);
-  }
+      padding: rem(55) calc((100vw - 1156px) / 2);
+    }
   }
 
   &__mobile-toggler {
