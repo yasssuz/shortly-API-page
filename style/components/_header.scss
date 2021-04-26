@@ -77,7 +77,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: rem(30);
     left: -400px;
     opacity: 0;
     visibility: hidden;
@@ -97,6 +96,7 @@
       line-height: rem(27);
       font-weight: bold;
       text-transform: capitalize;
+      margin-bottom: rem(30);
     }
 
     .signup-side {
@@ -105,10 +105,10 @@
       align-items: center;
       border-top: 1px solid hsla(257, 8%, 63%, 1);
       width: 100%;
-      gap: rem(30);
 
       a:first-child {
         margin-top: rem(30);
+        margin-bottom: rem(30);
       }
 
       .primary-btn {

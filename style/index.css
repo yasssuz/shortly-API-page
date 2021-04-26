@@ -95,7 +95,6 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.875rem;
   left: -400px;
   opacity: 0;
   visibility: hidden;
@@ -114,6 +113,7 @@ button {
   line-height: 1.6875rem;
   font-weight: bold;
   text-transform: capitalize;
+  margin-bottom: 1.875rem;
 }
 .header__navigation .signup-side {
   display: flex;
@@ -121,10 +121,10 @@ button {
   align-items: center;
   border-top: 1px solid #9d99a8;
   width: 100%;
-  gap: 1.875rem;
 }
 .header__navigation .signup-side a:first-child {
   margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
 }
 .header__navigation .signup-side .primary-btn {
   width: 100%;
