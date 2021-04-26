@@ -4,7 +4,16 @@
   right: 0; 
   top: 0;
   bottom: 0;
-  background: linear-gradient()
+  background: linear-gradient(to bottom, transparent, $DarkViolet);
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 .header {
@@ -17,18 +26,37 @@
     justify-content: space-between;
     position: relative;
     margin: 0 24px;
+    z-index: 99;
   }
 
   &__mobile-toggler {
     display: block;
     cursor: pointer;
 
+    &.active {
+      .bar {
+        background: $DarkViolet;
+
+        &:nth-child(1) {
+          transform: translateY(9px) rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          transform: translateY(-9px) rotate(-45deg);
+        }
+      }
+    }
+
     .bar {
       display: block;
       width: 24px;
       height: 3px;
       background: $GrayishViolet;
-      transition: opacity 0.2s ease, transform 0.2s ease;
+      transition: opacity 0.2s ease, transform 0.2s ease, background 0.2s ease;
     }
 
     .bar + .bar {
@@ -50,6 +78,17 @@
     flex-direction: column;
     align-items: center;
     gap: rem(30);
+    left: -400px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, left 0.3s ease, visibility 0.3s ease;
+    z-index: 99;
+
+    &.active {
+      left: 0;
+      visibility: visible;
+      opacity: 1;
+    }
 
     .link {
       font-size: rem(18);
@@ -57,7 +96,6 @@
       text-decoration: none;
       line-height: rem(27);
       font-weight: bold;
-      margin-bottom: rem(30);
       text-transform: capitalize;
     }
 
@@ -67,12 +105,13 @@
       align-items: center;
       border-top: 1px solid hsla(257, 8%, 63%, 1);
       width: 100%;
+      gap: rem(30);
 
       a:first-child {
         margin-top: rem(30);
       }
 
-      .primary-btn 
+      .primary-btn {
         width: 100%;
         padding: 0.6em;
       }

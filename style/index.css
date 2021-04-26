@@ -3,8 +3,7 @@
 *::after {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body,
@@ -12,19 +11,13 @@ input,
 textarea,
 button {
   font-size: 1.125rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .primary-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   border-radius: 1.75rem;
   background: #2acfcf;
   text-decoration: none;
@@ -40,59 +33,60 @@ button {
   right: 0;
   top: 0;
   bottom: 0;
+  background: linear-gradient(to bottom, transparent, #3b3054);
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.overlay.active {
+  visibility: visible;
+  opacity: 1;
 }
 
 .header {
   min-height: 100vh;
 }
-
 .header__content {
   padding: 2.5rem calc((100vw - 1156px) / 2) 1.5625rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   position: relative;
   margin: 0 24px;
+  z-index: 99;
 }
-
 .header__mobile-toggler {
   display: block;
   cursor: pointer;
 }
-
+.header__mobile-toggler.active .bar {
+  background: #3b3054;
+}
+.header__mobile-toggler.active .bar:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.header__mobile-toggler.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.header__mobile-toggler.active .bar:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
 .header__mobile-toggler .bar {
   display: block;
   width: 24px;
   height: 3px;
   background: #9e9aa7;
-  -webkit-transition: opacity 0.2s ease, -webkit-transform 0.2s ease;
-  transition: opacity 0.2s ease, -webkit-transform 0.2s ease;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  transition: opacity 0.2s ease, transform 0.2s ease, -webkit-transform 0.2s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease, background 0.2s ease;
 }
-
 .header__mobile-toggler .bar + .bar {
   margin-top: 6px;
 }
-
 .header__navigation {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
   background: #3b3054;
   top: 6.125rem;
@@ -100,42 +94,41 @@ button {
   padding: 2.5rem 1.5rem;
   display: flex;
   flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
+  gap: 1.875rem;
+  left: -400px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, left 0.3s ease, visibility 0.3s ease;
+  z-index: 99;
 }
-
+.header__navigation.active {
+  left: 0;
+  visibility: visible;
+  opacity: 1;
+}
 .header__navigation .link {
   font-size: 1.125rem;
   color: white;
   text-decoration: none;
   line-height: 1.6875rem;
   font-weight: bold;
-  margin-bottom: 1.875rem;
   text-transform: capitalize;
 }
-
 .header__navigation .signup-side {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   border-top: 1px solid #9d99a8;
   width: 100%;
+  gap: 1.875rem;
 }
-
 .header__navigation .signup-side a:first-child {
   margin-top: 1.875rem;
 }
-
 .header__navigation .signup-side .primary-btn {
   width: 100%;
   padding: 0.6em;
 }
+
 /*# sourceMappingURL=index.css.map */
