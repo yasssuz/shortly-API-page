@@ -11,6 +11,7 @@
   font-weight: bold;
   line-height: rem(27);
   transition: all 0.2s ease;
+  border: none;
 
   &:hover {
     border: 1px solid $Cyan;
@@ -27,6 +28,10 @@
   }
 
   &-page {
-    font-size: rem(20);
+    font-size: rem(17);
+
+    @media screen and (min-width: 650px) {
+      font-size: rem(20);
+    }
   }
 }

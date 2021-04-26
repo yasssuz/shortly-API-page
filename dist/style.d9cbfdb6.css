@@ -26,6 +26,12 @@ button {
   font-family: "Poppins", sans-serif;
 }
 
+input:focus,
+button:focus,
+a:focus {
+  outline: 3px dashed #2acfcf;
+}
+
 .primary-title {
   font-weight: bold;
   font-size: 2.625rem;
@@ -227,6 +233,7 @@ button {
   font-weight: bold;
   line-height: 1.6875rem;
   transition: all 0.2s ease;
+  border: none;
 }
 .primary-btn:hover {
   border: 1px solid #2acfcf;
@@ -242,7 +249,12 @@ button {
   }
 }
 .primary-btn-page {
-  font-size: 1.25rem;
+  font-size: 1.0625rem;
+}
+@media screen and (min-width: 650px) {
+  .primary-btn-page {
+    font-size: 1.25rem;
+  }
 }
 
 .hero__content {
@@ -276,6 +288,75 @@ button {
   height: 3.5rem;
   width: 12.3125rem;
   margin: auto;
+}
+
+.shortener {
+  background: #f2f2f2;
+  margin-top: 10.5rem;
+}
+.shortener__content {
+  margin: 0 24px;
+  padding: 0 calc((100vw - 1158px) / 2);
+  transform: translateY(-5rem);
+}
+.shortener__input-area {
+  border-radius: 0.625em;
+  background: #3b3054;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.shortener__input-area input {
+  height: 3rem;
+  border-radius: 0.3125em;
+  border: 0;
+  padding: 0 1rem;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.12px;
+  color: #35323e;
+}
+.shortener__input-area input::-webkit-input-placeholder {
+  opacity: 0.5;
+}
+.shortener__input-area button {
+  margin-top: 1rem;
+  min-height: 3rem;
+  border-radius: 0.3125em;
+}
+.shortener__output-area {
+  list-style: none;
+}
+.shortener__output-area li {
+  background: white;
+  border-radius: 0.3125em;
+  margin-top: 1.5rem;
+}
+.shortener__output-area li .link {
+  font-weight: 500;
+  font-size: 1rem;
+  word-wrap: break-word;
+  display: block;
+  line-height: 2.25rem;
+}
+.shortener__output-area li .link.original {
+  padding: 0.375rem 1rem;
+}
+.shortener__output-area li .link.shortened {
+  padding: 0.375rem 0 0.5rem;
+  color: #2acfcf;
+}
+.shortener__output-area li .new-data {
+  padding: 0 1rem 1rem;
+  border-top: 1px solid rgba(157, 153, 168, 0.25);
+}
+.shortener__output-area li .new-data button {
+  width: 100%;
+  min-height: 2.5rem;
+  border-radius: 0.3125em;
+}
+.shortener__output-area li .new-data button.copied {
+  background: #3b3054;
 }
 
 /*# sourceMappingURL=/style.d9cbfdb6.css.map */

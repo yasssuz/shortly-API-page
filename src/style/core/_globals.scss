@@ -1,3 +1,5 @@
+@use 'colors' as *;
+
 *,
 *::before,
 *::after {
@@ -24,4 +26,12 @@ textarea,
 button {
   font-size: rem(18);
   font-family: 'Poppins', sans-serif;
+}
+
+input, 
+button, 
+a {
+  &:focus {
+    outline: 3px dashed $Cyan;
+  }
 }
