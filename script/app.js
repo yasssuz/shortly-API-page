@@ -6,4 +6,5 @@ function showMenu() {
   toggler.classList.toggle('active')
   document.querySelector('.header__navigation').classList.toggle('active')
   document.querySelector('.overlay').classList.toggle('active')
+  document.querySelector('html').classList.toggle('active')
 }

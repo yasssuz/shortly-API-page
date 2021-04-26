@@ -14,6 +14,10 @@ button {
   font-family: "Poppins", sans-serif;
 }
 
+html.active {
+  overflow: hidden;
+}
+
 .primary-btn {
   display: flex;
   align-items: center;
