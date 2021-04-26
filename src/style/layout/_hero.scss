@@ -1,3 +1,6 @@
+@use '../core' as *; 
+@use '../components/buttons';
+
 .hero {
   &__content {
     display: grid;

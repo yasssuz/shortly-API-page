@@ -1,3 +1,6 @@
+@use 'colors' as *;
+@use 'mixins' as *;
+
 .primary-title {
   font-weight: bold;
   font-size: rem(42);

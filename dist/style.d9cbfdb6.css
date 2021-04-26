@@ -22,7 +22,7 @@ body,
 input,
 textarea,
 button {
-  font-size: 1.125rem;
+  font-size: rem(18);
   font-family: "Poppins", sans-serif;
 }
 
@@ -40,35 +40,6 @@ button {
   line-height: 1.875rem;
   letter-spacing: 0.122px;
   color: #9e9aa7;
-}
-
-.primary-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 1.75rem;
-  background: #2acfcf;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  line-height: 1.6875rem;
-  transition: all 0.2s ease;
-}
-.primary-btn:hover {
-  border: 1px solid #2acfcf;
-  background: transparent;
-  color: #2acfcf;
-}
-.primary-btn-navbar {
-  font-size: 1.125rem;
-}
-@media screen and (min-width: 650px) {
-  .primary-btn-navbar {
-    font-size: 1rem;
-  }
-}
-.primary-btn-page {
-  font-size: 1.25rem;
 }
 
 .overlay {
@@ -245,6 +216,35 @@ button {
   }
 }
 
+.primary-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.75rem;
+  background: #2acfcf;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  line-height: 1.6875rem;
+  transition: all 0.2s ease;
+}
+.primary-btn:hover {
+  border: 1px solid #2acfcf;
+  background: transparent;
+  color: #2acfcf;
+}
+.primary-btn-navbar {
+  font-size: 1.125rem;
+}
+@media screen and (min-width: 650px) {
+  .primary-btn-navbar {
+    font-size: 1rem;
+  }
+}
+.primary-btn-page {
+  font-size: 1.25rem;
+}
+
 .hero__content {
   display: grid;
   grid-template-rows: auto 1fr;
@@ -278,4 +278,4 @@ button {
   margin: auto;
 }
 
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=/style.d9cbfdb6.css.map */
