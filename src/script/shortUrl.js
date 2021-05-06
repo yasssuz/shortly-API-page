@@ -1,6 +1,13 @@
 import { getQuery } from './utils.js'
 
 getQuery('.shortener__input-area').addEventListener('submit', showCard)
+document.addEventListener('click', (e) => {
+  const target = e.target
+  
+  if(target.classList.contains('copy-link-btn')) {
+    copyShortLink(target)
+  }
+})
 
 export default async function showCard(e) {
   e.preventDefault()
@@ -29,7 +36,7 @@ export function generateHTML(originalLink, shortLink) {
     <span class="link original">${originalLink}</span>
     <div class="new-data">
       <span class="link shortened">${shortLink}</span>
-      <button type="submit" class="primary-btn primary-btn-page">Shorten It!</button>
+      <button type="submit" class="primary-btn primary-btn-page copy-link-btn">Copy!</button>
     </div>
   `
   getQuery('.shortener__output-area').appendChild(card)
@@ -44,4 +51,11 @@ function validateInput(input) {
 
 function showError() {
   throw 'Link is not valid'
+}
+
+function copyShortLink(button) {
+  const cardBtn = button
+  const shortLink = cardBtn.previousElementSibling.innerText
+
+  window.navigator.clipboard.writeText(shortLink)
 }
