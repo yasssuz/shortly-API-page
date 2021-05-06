@@ -19,6 +19,17 @@ export function displayStoredLinks() {
   links.map(link => generateHTML(link.originalLink, link.shortLink))
 }
 
+export function storeNewLink(shortLink, originalLink) {
+  const links = getStoredLinks()
+  const newLinks = {
+    shortLink: shortLink,
+    originalLink: originalLink
+  }
+
+  links.push(newLinks)
+  localStorage.setItem('links', JSON.stringify(links))
+}
+
 // export function deleteStoredLink(shortLink) {
 //   const links = getStoredLinks()
 

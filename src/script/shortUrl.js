@@ -1,4 +1,5 @@
 import { getQuery } from './utils.js'
+import { storeNewLink } from './storage'
 
 getQuery('.shortener__input-area').addEventListener('submit', showCard)
 document.addEventListener('click', (e) => {
@@ -19,6 +20,8 @@ export default async function showCard(e) {
   const shortLink = await fetchShortUrl(originalLink)
 
   generateHTML(originalLink, shortLink)
+  storeNewLink(shortLink, originalLink)
+  clearInput()
   submitBtn.textContent = 'Shorten it!'
 } 
 
@@ -58,4 +61,8 @@ function copyShortLink(button) {
   const shortLink = cardBtn.previousElementSibling.innerText
 
   window.navigator.clipboard.writeText(shortLink)
+}
+
+function clearInput() {
+  getQuery('#original-link-input').value = ''
 }
