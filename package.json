@@ -6,11 +6,19 @@
   "author": "karim fanti <karimwebdevelopment@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "parcel-bundler": "^1.12.5",
+    "@parcel/transformer-sass": "2.0.0-beta.2",
+    "parcel": "^2.0.0-beta.2",
     "sass": "^1.32.11"
   },
   "scripts": {
     "dev": "parcel src/index.html",
     "build": "parcel build src/index.html"
-  }
+  },
+  "browserslist": [
+    "last 3 and_chr versions",
+    "last 3 chrome versions",
+    "last 3 opera versions",
+    "last 3 ios_saf versions",
+    "last 3 safari versions"
+  ]
 }
