@@ -1,7 +1,7 @@
 {
   "name": "app",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.html",
   "repository": "https://github.com/Galielo-App/shortly-API-page.git",
   "author": "karim fanti <karimwebdevelopment@gmail.com>",
   "license": "MIT",
