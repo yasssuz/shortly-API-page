@@ -33,5 +33,9 @@
     @media screen and (min-width: 650px) {
       font-size: rem(20);
     }
+
+    &.copied {
+      background: $DarkViolet;
+    }
   }
 }
