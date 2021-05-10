@@ -9,10 +9,25 @@
   letter-spacing: -1.05px;
 }
 
+.secondary-title {
+  font-weight: bold;
+  font-size: rem(28);
+  color: $VeryDarkBlue;
+  line-height: rem(48);
+  letter-spacing: -0.7px;
+}
+
 .primary-paragraph {
   font-weight: 500;
   font-size: rem(18);
   line-height: rem(30);
   letter-spacing: 0.122px;
+  color: $GrayishViolet;
+}
+
+.secondary-paragraph {
+  font-weight: 500;
+  font-size: rem(16);
+  line-height: rem(26);
   color: $GrayishViolet;
 }
