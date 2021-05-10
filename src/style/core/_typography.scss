@@ -15,6 +15,10 @@
   color: $VeryDarkBlue;
   line-height: rem(48);
   letter-spacing: -0.7px;
+
+  &-white {
+    color: $White;
+  }
 }
 
 .primary-paragraph {
