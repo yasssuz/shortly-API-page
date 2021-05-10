@@ -1,0 +1,78 @@
+@use '../core' as *;
+
+.footer {
+  background: $VeryDarkViolet;
+  padding: rem(56) rem(24);
+  text-align: center;
+
+  &__logo {
+    width: 121px;
+    height: 33px;
+    margin-bottom: rem(50);
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-transform: capitalize;
+
+    strong {
+      color: $White;
+      font-weight: bold;
+      font-size: rem(16);
+      line-height: rem(24);
+      margin-bottom: rem(22);
+    }
+
+    a {
+      color: $Gray;
+      font-size: rem(15);
+      font-weight: 500;
+      line-height: rem(22);
+      text-decoration: none;
+      margin-bottom: rem(10);
+      transition: color 0.2s ease, transform 0.2s ease;
+
+      &:hover {
+        color: $Cyan;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__links + &__links {
+    margin-top: rem(40);
+  }
+
+  &__icons {
+    margin-top: rem(48);
+
+    svg {
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      
+      path {
+        transition: fill 0.2s ease;
+      }
+
+      &:hover { 
+        transform: scale(1.2);
+
+        path {
+          fill: $Cyan;
+        }
+      }
+    }
+    
+    svg + svg {
+      margin-left: rem(24);
+    }
+
+    .twitter {
+      height: 21px;
+    }
+  }
+}
