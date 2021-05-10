@@ -7,6 +7,7 @@ document.addEventListener('click', (e) => {
   
   if(target.classList.contains('copy-link-btn')) {
     copyShortLink(target)
+    addCopiedAnimation(target)
   }
 })
 
@@ -61,6 +62,18 @@ function copyShortLink(button) {
   const shortLink = cardBtn.previousElementSibling.innerText
 
   window.navigator.clipboard.writeText(shortLink)
+}
+
+function addCopiedAnimation(e) {
+  //add new style
+  e.textContent = 'Copied!'
+  e.classList.add('copied')
+
+  //remove new style
+  setInterval(() => {
+    e.classList.remove('copied');
+    e.textContent = 'Copy!'
+  }, 3000)
 }
 
 function clearInput() {
