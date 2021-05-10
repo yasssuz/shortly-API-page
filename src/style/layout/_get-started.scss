@@ -1,0 +1,20 @@
+@use '../core' as *; 
+
+.get-started {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: rem(300);
+  background: url('../assets/bg-boost-mobile.svg'), $DarkViolet;
+
+  h2 {
+    margin-bottom: rem(16);
+  }
+
+  a {
+    min-height: rem(56);
+    width: rem(197);
+    font-size: rem(20);
+  }
+}
