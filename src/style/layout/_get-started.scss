@@ -6,7 +6,8 @@
   justify-content: center;
   flex-direction: column;
   min-height: rem(300);
-  background: url('../assets/bg-boost-mobile.svg'), $DarkViolet;
+  background: url('../assets/bg-boost-mobile.svg') no-repeat, $DarkViolet;
+  background-size: cover;
 
   h2 {
     margin-bottom: rem(16);
