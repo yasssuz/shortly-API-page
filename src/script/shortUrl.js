@@ -14,7 +14,7 @@ document.addEventListener('click', (e) => {
 export default async function showCard(e) {
   e.preventDefault()
   const submitBtn =  getQuery('form button')
-  const originalLink = validateInput(getQuery('#original-link-input').value)
+  const originalLink = validateInput(getQuery('#original-link-input'))
 
   submitBtn.textContent = 'Loading....'
 
@@ -49,11 +49,16 @@ export function generateHTML(originalLink, shortLink) {
 function validateInput(input) {
   const pattern = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig
 
-  !input.match(pattern) && showError() 
-  return input
+  !input.value.match(pattern) && inputNotValid(input) 
+  input.classList.remove('not-valid')
+  getQuery('#message-not-valid').classList.remove('not-valid')
+  
+  return input.value
 }
 
-function showError() {
+function inputNotValid(input) {
+  input.classList.add('not-valid')
+  getQuery('#message-not-valid').classList.add('not-valid')
   throw 'Link is not valid'
 }
 
