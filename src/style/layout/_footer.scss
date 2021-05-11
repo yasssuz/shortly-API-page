@@ -3,7 +3,19 @@
 .footer {
   background: $VeryDarkViolet;
   padding: rem(56) rem(24);
-  text-align: center;
+  
+  &__content {
+    max-width: 1156px; 
+    margin: auto;
+    text-align: center;
+
+    @media screen and (min-width: 750px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
 
   &__logo {
     width: 121px;
@@ -16,6 +28,10 @@
     align-items: center;
     flex-direction: column;
     text-transform: capitalize;
+
+    @media screen and (min-width: 750px) {
+      align-items: flex-start;
+    }
 
     strong {
       color: $White;
@@ -43,10 +59,18 @@
 
   &__links + &__links {
     margin-top: rem(40);
+
+    @media screen and (min-width: 750px) {
+      margin-top: 0;
+    }
   }
 
   &__icons {
     margin-top: rem(48);
+
+    @media screen and (min-width: 750px) {
+      margin-top: 0;
+    }
 
     svg {
       width: 24px;
