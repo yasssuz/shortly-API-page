@@ -5,12 +5,23 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  text-align: center;
   min-height: rem(300);
   background: url('../assets/bg-boost-mobile.svg') no-repeat, $DarkViolet;
   background-size: cover;
 
+  @media screen and (min-width: 700px) {
+    background: url('../assets/bg-boost-desktop.svg') no-repeat, $DarkViolet; 
+    background-size: cover;
+    min-height: rem(270);
+  }
+
   h2 {
     margin-bottom: rem(16);
+
+    @media screen and (min-width: 700px) {
+      margin-bottom: rem(32);
+    }
   }
 
   a {
