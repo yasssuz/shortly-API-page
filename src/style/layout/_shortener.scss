@@ -18,6 +18,16 @@
     background: url('../assets/bg-shorten-mobile.svg') no-repeat, $DarkViolet;
     background-position: top right;
 
+    @media screen and (min-width: 850px) {
+      align-items: center;
+      justify-content: space-between; 
+      flex-direction: row;
+      padding: rem(20) rem(64);
+      min-height: rem(168);
+      position: relative;
+      background: url('../assets/bg-shorten-desktop.svg') no-repeat, $DarkViolet;
+    }
+
     input {
       height: rem(48);
       border-radius: em(5);
@@ -27,6 +37,12 @@
       font-size: rem(16);
       letter-spacing: 0.12px;
       color: $VeryDarkBlue;
+
+      @media screen and (min-width: 850px) {
+        height: rem(64);
+        padding: 0 rem(32);
+        width: 80%;
+      }
 
       &.not-valid {
         border: 2px solid $Red;
@@ -51,6 +67,12 @@
       margin-top: rem(5);
       display: none;
 
+      @media screen and (min-width: 850px) {
+        position: absolute;
+        bottom: 15%;
+        font-size: rem(16);
+      }
+
       &.not-valid {
         display: block;
       }
@@ -60,6 +82,13 @@
       margin-top: rem(16);
       min-height: rem(48);
       border-radius: em(5);
+
+      @media screen and (min-width: 850px) {
+        margin-top: 0;
+        min-height: rem(64);
+        width: rem(188);
+        margin-left: rem(24);
+      }
     }
   }
 
@@ -71,6 +100,13 @@
       border-radius: em(5);
       margin-top: rem(24);
 
+      @media screen and (min-width: 850px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: rem(16) rem(24);
+      }
+
       .link {
         font-weight: 500;
         font-size: rem(16);
@@ -78,24 +114,49 @@
         display: block;
         line-height: rem(36);
 
+        @media screen and (min-width: 850px) {
+          max-width: 65%;
+        }
+        
         &.original {
           padding: rem(6) rem(16);
-        }
 
+          @media screen and (min-width: 850px) {
+            padding: 0;
+          }
+        }
+        
         &.shortened {
           padding: rem(6) 0 rem(8);
           color: $Cyan;
+
+          @media screen and (min-width: 850px) {
+            padding: 0;
+          }
         }
       }
 
       .new-data {
         padding: 0 rem(16) rem(16);
         border-top: 1px solid hsla(257, 8%, 63%, 0.25);
+
+        @media screen and (min-width: 850px) {
+          display: flex;
+          align-items: center;
+          padding: 0;
+          border: 0;
+        }
       
         button {
           width: 100%;
           min-height: rem(40);
           border-radius: em(5);
+
+          @media screen and (min-width: 850px) {
+            width: rem(103);
+            font-size: rem(15);
+            margin-left: rem(24);
+          }
 
           &.copied {
             background: $DarkViolet;
