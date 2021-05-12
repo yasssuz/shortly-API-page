@@ -15,7 +15,6 @@
   color: $VeryDarkBlue;
   line-height: rem(48);
   letter-spacing: -0.2px;
-  transition: font-size 0.4s ease;
 
   &-white {
     color: $White;
@@ -24,6 +23,13 @@
   @media screen and (min-width: 700px) {
     font-size: rem(40);
   }
+}
+
+.tertiary-title {
+  font-weight: bold;
+  line-height: rem(33);
+  font-size: rem(22);
+  color: $VeryDarkBlue;
 }
 
 .primary-paragraph {
@@ -39,4 +45,8 @@
   font-size: rem(16);
   line-height: rem(26);
   color: $GrayishViolet;
+
+  @media screen and (min-width: 750px) {
+    font-size: rem(18);
+  }
 }
