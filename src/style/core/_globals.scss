@@ -31,6 +31,8 @@ button {
 input, 
 button, 
 a {
+  cursor: pointer;
+  
   &:focus {
     outline: 3px dashed $Cyan;
   }
