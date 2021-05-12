@@ -6,20 +6,33 @@
   height: auto;
 
   p {
-    margin-top: rem(16);
+    margin: rem(16) auto 0;
+    max-width: 45ch;
   }
   
   &__content {
-    padding-top: rem(42);
-    padding-bottom: rem(75);
+    padding: rem(42) calc((100vw - 1156px) /2) rem(75);
     margin: 0 24px;
+
+    @media screen and (min-width: 1156px) {
+      margin: 0;
+      padding-bottom: rem(120);
+      padding-top: rem(72);
+    }
   }
 
-  &__cards {
+  &__cards {   
     list-style: none;
     position: relative;
     overflow: hidden;
     display: grid;
+
+    @media screen and (min-width: 950px) {
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: rem(60);
+      gap: rem(30);
+      height: rem(400);
+    }
 
     &::before {
       content: '';
@@ -31,6 +44,12 @@
       left: 50%;
       top: 120px;
       transform: translateX(-50%);
+
+      @media screen and (min-width: 950px) {
+        width: 90%;
+        height: 8px;
+        top: 63%;
+      }
     }
   }
 
@@ -40,10 +59,30 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: rem(92);
     padding: 0 32px 2.2rem;
     position: relative;
     z-index: 10;
+    margin: rem(92) auto 0;
+    max-width: rem(350);
+
+    @media screen and (min-width: 950px) {
+      align-items: flex-start;
+      text-align: left;
+      margin: 0;
+      height: auto;
+
+      &:nth-child(1) {
+        align-self: start;
+      }
+
+      &:nth-child(2) {
+        align-self: center;
+      }
+
+      &:nth-child(3) {
+        align-self: end;
+      }
+    }
 
     .illustration {
       background: $DarkViolet;
@@ -54,6 +93,11 @@
       align-items: center;
       justify-content: center;
       transform: translateY(-50%);
+
+      @media screen and (min-width: 950px) {
+        position: relative;
+        z-index: 11;
+      }
     }
   }
 }
