@@ -12,26 +12,27 @@
   
   &__content {
     padding: rem(42) calc((100vw - 1156px) /2) rem(75);
-    margin: 0 24px;
-
+    margin: 0 24px; 
+    
     @media screen and (min-width: 1156px) {
       margin: 0;
       padding-bottom: rem(120);
       padding-top: rem(72);
     }
   }
-
+  
   &__cards {   
     list-style: none;
     position: relative;
     overflow: hidden;
     display: grid;
-
+    
     @media screen and (min-width: 950px) {
       grid-template-columns: repeat(3, 1fr);
       margin-top: rem(60);
       gap: rem(30);
       height: rem(400);
+      overflow: visible; 
     }
 
     &::before {
