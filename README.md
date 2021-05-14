@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://shortly-api-page.vercel.app/](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/mobile-first-with-sass-functional-javascript-bem-and-parcel-bundler-SQ7sX89Nm](https://www.frontendmentor.io/solutions/mobile-first-with-sass-functional-javascript-bem-and-parcel-bundler-SQ7sX89Nm)
 - Live Site URL: [https://shortly-api-page.vercel.app/](https://shortly-api-page.vercel.app/)
 
 ## My process
